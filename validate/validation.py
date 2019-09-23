@@ -9,7 +9,7 @@
 """
 
 from math import sqrt
-from utils import _number_in_range, _validateRange
+from utils import validate_range
 
 _TYPE_ERROR = 'El rango indicado no es valido, debe ingresar una "list" o "tuple"'
 
@@ -26,7 +26,7 @@ def valInt(number, ran=None):
             return False
 
         else:
-            return _validateRange(number, ran)
+            return validate_range(number, ran)
 
     if type(number) is int:
         return True
@@ -46,7 +46,7 @@ def valFloat(number, ran=None):
             return False
 
         else:
-            return _validateRange(number, ran)
+            return validate_range(number, ran)
 
     if type(number) is float:
         return True
@@ -68,7 +68,7 @@ def valComplex(number, ran=None):
 
         else:
             mod = sqrt(number.real**2 + number.imag**2)
-            return _validateRange(mod, ran)
+            return validate_range(mod, ran)
 
     if type(number) is complex:
         return True

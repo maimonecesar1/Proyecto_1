@@ -21,7 +21,7 @@ def determinant(matrix):
     else:
         for j in range(order):
             det = det + matrix[0][j] * cofactor(matrix, 0, j)
-    # import pdb; pdb.set_trace()
+    
     return det
 
 def cofactor(matrix, row, colunm):
@@ -45,13 +45,6 @@ def cofactor(matrix, row, colunm):
                     x = x + 1
                     y = 0
 
-    # import pdb; pdb.set_trace()
     a = determinant(submatrix)
     b = (-1)**(row+colunm)
     return a*b
-
-matrix = [[1,2,3], [0,4,5], [0,0,7]]
-matrix2 = [[3,2,-3], [7,-1,0], [2,-4,5]]
-# matrix3 = [[3, 2, -3, 4, 5], [7, -1, 0, 6, 7], [ 2, -4, 5, 2, 3], [1, 3, 4, 5, -10], [-3, 4, 12, -15, 6]]
-
-# print(determinant(matrix))
